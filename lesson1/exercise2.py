@@ -2,14 +2,24 @@
 
 from __future__ import print_function
 
-ip_addr = input('Please enter an IP address: ')
+try:
+    # Python 2
+    ip_addr = raw_input('Please enter an IP address: ')
+except NameError:
+    # Python 3
+    ip_addr = input('Please enter an IP address: ')
+
 octets = ip_addr.split('.')
 
-print(f'{"Octet1":^15}{"Octet2":^15}{"Octet3":^15}{"Octet4":^15}')
+print('{:^15}{:^15}{:^15}{:^15}'.format('Octet1', 'Octet2', 'Octet3', 'Octet4'))
 print('-' * 60)
-print(f'{octets[0]:^15}{octets[1]:^15}{octets[2]:^15}{octets[3]:^15}')
-print(f'{bin(int(octets[0])):^15}{bin(int(octets[1])):^15}'
-      f'{bin(int(octets[2])):^15}{bin(int(octets[3])):^15}')
-print(f'{hex(int(octets[0])):^15}{hex(int(octets[1])):^15}'
-      f'{hex(int(octets[2])):^15}{hex(int(octets[3])):^15}')
+print("{:^15}{:^15}{:^15}{:^15}".format(*octets))
+print('{:^15}{:^15}{:^15}{:^15}'.format(bin(int(octets[0])),
+                                        bin(int(octets[1])),
+                                        bin(int(octets[2])),
+                                        bin(int(octets[3]))))
+print('{:^15}{:^15}{:^15}{:^15}'.format(hex(int(octets[0])),
+                                        hex(int(octets[1])),
+                                        hex(int(octets[2])),
+                                        hex(int(octets[3]))))
 print('-' * 60)

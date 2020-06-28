@@ -2,9 +2,9 @@
 
 from __future__ import print_function
 
-ipv6_address1 = '2001:db8:85a3::1'
-IPV6_ADDRESS2 = '2001:db8:85a3::1'
-IPv6_Address3 = '2001:db8:85a3::1'
+ipv6_addr1 = '2001:db8:85a3::1'
+IPV6_ADDR2 = '2001:db8:85a3::1'
+IPv6_Addr3 = '2001:db8:85a3::1'
 
-print(f'Is variable1 equal to variable2: {ipv6_address1 == IPV6_ADDRESS2}')
-print(f'Is variable2 equal to variable3: {IPV6_ADDRESS2 == IPv6_Address3}')
+print('Is variable 1 equal to variable2: {}'.format(ipv6_addr1 == IPV6_ADDR2))
+print('Is variable2 equal to variable3: {}'.format(IPV6_ADDR2 == IPv6_Addr3))

@@ -11,5 +11,5 @@ last_line = show_ip_bgp_summ[-1]
 as_number = first_line.split()[-1]
 bgp_peer_ip = last_line.split()[0]
 
-print(f'AS number: {as_number}')
-print(f'BGP Peer IP address: {bgp_peer_ip}')
+print('AS number: {}'.format(as_number))
+print('BGP Peer IP address: {}'.format(bgp_peer_ip))
